@@ -81,4 +81,13 @@ public class UsuarioController {
     public ResponseEntity<List<Usuario>> buscarPorEstado(@PathVariable String estado) {
         return new ResponseEntity<>(usuarioService.buscarPorEstado(estado), HttpStatus.OK);
     }
+
+    // Eliminar físicamente un usuario por cédula
+    @DeleteMapping("/{cedula}/hard")
+    public ResponseEntity<Void> eliminarUsuarioFisico(@PathVariable String cedula) {
+    boolean eliminado = usuarioService.eliminarUsuarioFisico(cedula);
+    return eliminado ?
+        new ResponseEntity<>(HttpStatus.NO_CONTENT) :
+        new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }

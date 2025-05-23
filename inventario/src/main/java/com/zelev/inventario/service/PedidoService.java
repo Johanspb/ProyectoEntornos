@@ -36,8 +36,12 @@ public class PedidoService {
         return pedidoRepository.save(pedido);
     }
 
-    public void eliminarPedido(Long id) {
+    public boolean eliminarPedido(Long id) {
+    if (pedidoRepository.existsById(id)) {
         pedidoRepository.deleteById(id);
+        return true;
+    }
+    return false;
     }
 
     public Pedido cambiarEstado(Long id, String estado) {

@@ -74,6 +74,15 @@ public class UsuarioService {
         return usuarioRepository.findByEstado(estado);
     }
 
+    // eliminar usuario físico (hard delete)
+    public boolean eliminarUsuarioFisico(String cedula) {
+    if (usuarioRepository.existsById(cedula)) {
+        usuarioRepository.deleteById(cedula);
+        return true;
+    }
+    return false;
+    }
+
     public Usuario actualizarUsuario(String cedula, Usuario usuario) {
         Usuario usuarioExistente = usuarioRepository.findById(cedula)
             .orElseThrow(() -> new RuntimeException("Usuario no encontrado."));

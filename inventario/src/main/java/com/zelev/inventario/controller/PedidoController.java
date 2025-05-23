@@ -61,6 +61,16 @@ public class PedidoController {
             new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    // Eliminar pedido
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarPedido(@PathVariable Long id) {
+    boolean eliminado = pedidoService.eliminarPedido(id);
+    return eliminado ?
+        new ResponseEntity<>(HttpStatus.NO_CONTENT) :
+        new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
     // Obtener unidades de un pedido
     @GetMapping("/{id}/unidades")
     public ResponseEntity<List<Unidad>> obtenerUnidadesDePedido(@PathVariable Long id) {
