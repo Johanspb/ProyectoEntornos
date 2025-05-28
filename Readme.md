@@ -49,6 +49,7 @@ La aplicación sigue una arquitectura **MVC** con persistencia basada en **JPA**
 | PUT | `/api/pedidos/{id}/estado` | Cambia el estado de un pedido |
 | GET | `/api/pedidos/{id}/unidades` | Obtiene las unidades de un pedido |
 | POST | `/api/pedidos/{id}/agregar-unidad/{upc}` | Agrega una unidad a un pedido |
+| DELETE | `/api/{id}` | Elimina un pedido |
 
 ---
 
@@ -103,6 +104,7 @@ La aplicación sigue una arquitectura **MVC** con persistencia basada en **JPA**
 | GET | `/api/usuarios/{cedula}/roles` | Lista los roles de un usuario |
 | POST | `/api/usuarios/{cedula}/roles/{idRol}` | Asocia un rol a un usuario |
 | GET | `/api/usuarios/estado/{estado}` | Filtra usuarios por estado |
+| DELETE | `/api/usuarios/{cedula}/hard` | Elimina de la base el usuario que no tenga un pedido realcionado |
 
 ---
 
