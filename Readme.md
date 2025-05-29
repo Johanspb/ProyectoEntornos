@@ -15,7 +15,13 @@
 - Maven  
 
 ---
+## Integrantes
 
+-Johan Stiven Peñaranda Basto
+-Vanesa Alexandra Corredor Cepeda 
+-Juan Nicolás Garcia Vega
+
+---
 ## 🧱 Arquitectura y diseño
 
 La aplicación sigue una arquitectura **MVC** con persistencia basada en **JPA**, que mapea entidades a una base de datos relacional.
