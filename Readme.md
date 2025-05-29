@@ -17,9 +17,9 @@
 ---
 ## Integrantes
 
--Johan Stiven Peñaranda Basto
--Vanesa Alexandra Corredor Cepeda 
--Juan Nicolás Garcia Vega
+- Johan Stiven Peñaranda Basto
+- Vanesa Alexandra Corredor Cepeda 
+- Juan Nicolás Garcia Vega
 
 ---
 ## 🧱 Arquitectura y diseño
